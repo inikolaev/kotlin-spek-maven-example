@@ -1,4 +1,13 @@
-When running this these tests I get the following error:
+# Kotlin Spek Maven Example
+
+When running this these tests I get the error below. I created a Docker image which makes it easier to reproduce which you cab build with these commands:
+
+```bash
+docker build -i alpine-jdk8-maven .
+docker run -v $(pwd):/app --workdir /app alpine-jdk8-maven mvn -e clean test
+```
+
+This are the results of execution on my Mac without Docker:
 
 ```bash
 $ java -version
