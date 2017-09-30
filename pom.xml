@@ -16,6 +16,12 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>1.1.50</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit</artifactId>
             <version>1.1.50</version>
             <scope>test</scope>
@@ -23,12 +29,6 @@
         <dependency>
             <groupId>org.jetbrains.spek</groupId>
             <artifactId>spek-api</artifactId>
-            <version>1.1.5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.spek</groupId>
-            <artifactId>spek-junit-platform-engine</artifactId>
             <version>1.1.5</version>
             <scope>test</scope>
         </dependency>
@@ -112,7 +112,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20.1</version>
+                <version>2.19</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.junit.platform</groupId>
@@ -120,9 +120,9 @@
                         <version>1.0.0</version>
                     </dependency>
                     <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.0.0</version>
+                        <groupId>org.jetbrains.spek</groupId>
+                        <artifactId>spek-junit-platform-engine</artifactId>
+                        <version>1.1.5</version>
                     </dependency>
                 </dependencies>
                 <configuration>
